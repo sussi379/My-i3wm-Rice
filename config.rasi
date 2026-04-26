@@ -1,0 +1,78 @@
+* {
+    /* Theme settings */
+    highlight: bold italic;
+    scrollbar: true;
+
+    /* Gruvbox dark colors - darker black */
+    gruvbox-dark-bg0-hard:     #0a0a0a;
+    gruvbox-dark-bg0:          #121212;
+    gruvbox-dark-bg2:          #504945;
+    gruvbox-dark-fg0:          #ffffff;
+    gruvbox-dark-fg1:          #ffffff;
+    gruvbox-dark-red-dark:     #cc241d;
+    gruvbox-dark-red-light:    #fb4934;
+    gruvbox-dark-yellow-dark:  #d79921;
+    gruvbox-dark-yellow-light: #fabd2f;
+    gruvbox-dark-gray:         #ffffff;
+
+    /* Theme colors */
+    background:                  @gruvbox-dark-bg0-hard;
+    background-color:            @background;
+    foreground:                  #ffffff;
+    border-color:                #ffffff;
+    separatorcolor:              @border-color;
+    scrollbar-handle:            @border-color;
+
+    normal-background:           @background;
+    normal-foreground:           #ffffff;
+    alternate-normal-background: @gruvbox-dark-bg0;
+    alternate-normal-foreground: #ffffff;
+    selected-normal-background:  @gruvbox-dark-bg2;
+    selected-normal-foreground:  #ffffff;
+
+    active-background:           @gruvbox-dark-yellow-dark;
+    active-foreground:           #ffffff;
+    alternate-active-background: @active-background;
+    alternate-active-foreground: #ffffff;
+    selected-active-background:  @gruvbox-dark-yellow-light;
+    selected-active-foreground:  #ffffff;
+
+    urgent-background:           @gruvbox-dark-red-dark;
+    urgent-foreground:           #ffffff;
+    alternate-urgent-background: @urgent-background;
+    alternate-urgent-foreground: #ffffff;
+    selected-urgent-background:  @gruvbox-dark-red-light;
+    selected-urgent-foreground:  #ffffff;
+
+    /* Width only - no height changes */
+    width: 30%;
+}
+
+window {
+    transparency: "real";
+    location: center;
+    anchor: center;
+    width: 30%;
+    /* No height specified - uses default */
+}
+
+/* Fix for input text color */
+entry {
+    foreground: #ffffff;
+    background-color: @gruvbox-dark-bg0;
+    cursor-color: #ffffff;
+}
+
+inputbar {
+    children: ["entry"];
+    foreground: #ffffff;
+}
+
+/* Make sure text in entries is white */
+element-text {
+    foreground: #ffffff;
+}
+
+element selected {
+    foreground: #ffffff;
+}
